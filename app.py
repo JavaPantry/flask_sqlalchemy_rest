@@ -65,7 +65,7 @@ def add_product():
 def get_products():
   all_products = Product.query.all()
   result = products_schema.dump(all_products)
-  return jsonify(result.data)
+  return jsonify(result) #.data
 
 # Get Single Products
 @app.route('/product/<id>', methods=['GET'])
