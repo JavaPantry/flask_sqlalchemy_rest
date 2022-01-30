@@ -39,7 +39,7 @@ class ProductSchema(ma.Schema):
 product_schema = ProductSchema()  # strict=True
 products_schema = ProductSchema(many=True) # strict=True
 
-# Create a Product
+# Test API
 @app.route('/test', methods=['GET'])
 def test():
     return jsonify({'msg': 'Hello World!'})

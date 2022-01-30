@@ -2,16 +2,29 @@
 
 > Products API using Python Flask, SQL Alchemy and Marshmallow
 
-## Quick Start Using Pipenv
+## Quick Start Using Conda local environment (Pipenv conflicting with conda)
+
+
 
 ``` bash
-# instal pipenv
-(base) C:\PythonAnacondaWs-2021\flask_sqlalchemy_rest>pip install pipenv
-# Activate venv
-$ pipenv shell
+# deactivate default conda base environment
+(base) $ conda deactivate
+# create empty local environment
+$ conda create --prefix ./envs
 
-# Install dependencies
-$ pipenv install
+# activate local environment
+$ conda activate ./envs
+
+# install pip in local environment
+(/env) $ conda install pip
+
+# at this point VsCode ask to activate this virtual environment in current workspace
+
+# install required dependencies
+(/env) $ pip install flask flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy
+
+(/env) $ python app.py
+
 
 # Create DB
 $ python
@@ -24,7 +37,7 @@ python app.py
 ```
 
 ## Endpoints
-
+* GET     /test
 * GET     /product
 * GET     /product/:id
 * POST    /product
