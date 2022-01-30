@@ -1,0 +1,10 @@
+db.sqlite
+envs
+.vscode
+.idea
+node_modules
+dist
+*.iml
+package-lock.json
+bower_components
+__pycache__
